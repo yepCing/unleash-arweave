@@ -91,7 +91,7 @@
       <div class="plan-container">
         <div class="plan-content">
           <div class="plan-title fw-b gs-reveal">
-            「 More Than Just Low Cost When Uploading to Arweave 」
+            「More Than Just Low Cost When Uploading to Arweave」
           </div>
 
           <div class="plan al-c">
@@ -283,7 +283,6 @@ onMounted(async () => {
     })
   })
 
-  console.log(videoRef.value)
   videoRef.value!.playbackRate = 0.75
 })
 </script>
@@ -510,13 +509,14 @@ onMounted(async () => {
       z-index: 10;
       width: 100%;
       box-sizing: border-box;
-      border-top: 1px solid #313131;
+      // border-top: 1px solid #313131;
       .plan-content {
         max-width: 1440px;
         margin: 0 auto;
         padding: 64px;
       }
       .plan-title {
+        text-indent: -20px;
         font-size: 40px;
         letter-spacing: -1.6px;
         text-transform: uppercase;
