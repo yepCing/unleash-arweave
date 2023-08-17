@@ -2,7 +2,7 @@
   <div class="container">
     <div class="section-1">
       <video class="video" ref="videoRef" :src="video" muted autoplay loop></video>
-
+      <div class="banner"></div>
       <div class="banner-container">
         <div class="al-c" style="height: 30px">
           <img :src="icon1" width="32" alt="" />
@@ -13,7 +13,8 @@
           <img :src="close" class="mx-5" alt="" />
           <img :src="icon4" width="24" alt="" />
         </div>
-        <img class="title gs-reveal" :src="title" style="width: 50%" alt="" />
+        <img class="title gs-reveal" :src="title" alt="" />
+        <!-- <div class="title gs-reveal">UNLEASH ARWEAVE</div> -->
         <div class="desc gs-reveal mt-8">Cost is No Longer an Obstacle for Arweave!</div>
         <div class="desc gs-reveal">We Cover All Your Onchain and PermaWeb Needs!</div>
         <div class="btn cursor-p al-c" @click="handleLink('https://dashboard.4everland.org/')">
@@ -54,7 +55,14 @@
                 <img :src="greenCheck" width="24" alt="" />
                 <span class="ml-4">Up to 200GB monthly coverage</span>
               </div>
-              <div class="ta-r gt-color mt-8 cursor-p al-c justify-end">
+              <div
+                class="ta-r gt-color mt-8 cursor-p al-c justify-end"
+                @click="
+                  handleLink(
+                    'https://docs.google.com/forms/d/e/1FAIpQLSfnFDLUh3RA2y4uZxYQjwufVLz5_Z4TudHbly3jPZ6fqoDZbQ/viewform?usp=send_form'
+                  )
+                "
+              >
                 <span>Apply Now</span>
                 <img width="24" :src="gtArrow" alt="" />
               </div>
@@ -306,6 +314,12 @@ onMounted(async () => {
 }
 
 @media screen and (max-width: 768px) {
+  .banner {
+    display: block !important;
+  }
+  .video {
+    display: none !important;
+  }
   .section-1 {
     height: auto !important;
   }
@@ -367,7 +381,6 @@ onMounted(async () => {
   }
 }
 .container {
-  // font-family: 'MyFont';
   color: #fff;
   .section-1 {
     position: relative;
@@ -376,6 +389,7 @@ onMounted(async () => {
     height: 800px;
     color: #000;
     .video {
+      display: block;
       position: absolute;
       left: 0;
       top: 0;
@@ -384,6 +398,17 @@ onMounted(async () => {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    .banner {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('@/assets/img/banner.png') no-repeat;
+      background-position: center;
+      object-fit: contain;
     }
     .banner-container {
       position: relative;
@@ -399,7 +424,7 @@ onMounted(async () => {
         text-transform: uppercase;
       }
       .desc {
-        font-family: 'SF Pro Text';
+        font-family: 'SF Pro text';
         font-size: 24px;
         letter-spacing: 2.88px;
         font-weight: 300;
@@ -509,7 +534,6 @@ onMounted(async () => {
       z-index: 10;
       width: 100%;
       box-sizing: border-box;
-      // border-top: 1px solid #313131;
       .plan-content {
         max-width: 1440px;
         margin: 0 auto;
