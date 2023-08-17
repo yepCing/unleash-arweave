@@ -30,11 +30,11 @@
           <div class="box-body">
             <div class="body-item al-c">
               <img :src="check" width="24" alt="" />
-              <span class="ml-4">Free for up to 150KB</span>
+              <span class="ml-4">Free for up to 150KB (each file)</span>
             </div>
             <div class="body-item al-c">
               <img :src="check" width="24" alt="" />
-              <span class="ml-4"> auto-execution</span>
+              <span class="ml-4">auto-execution</span>
             </div>
             <div class="body-item al-c">
               <img :src="check" width="24" alt="" />
