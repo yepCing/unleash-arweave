@@ -48,11 +48,11 @@
             <div class="box-body">
               <div class="body-item al-c">
                 <img :src="greenCheck" width="24" alt="" />
-                <span class="ml-4">Free for up to 150KB</span>
+                <span class="ml-4">90% reduction over 150kb</span>
               </div>
               <div class="body-item gt al-c">
                 <img :src="greenCheck" width="24" alt="" />
-                <span class="ml-4"> auto-execution</span>
+                <span class="ml-4">Up to 200GB monthly coverage</span>
               </div>
               <div class="ta-r gt-color mt-8 cursor-p al-c justify-end">
                 <span>Apply Now</span>
